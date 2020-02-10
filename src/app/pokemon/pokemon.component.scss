@@ -1,0 +1,35 @@
+// .pokecard {
+//     border: 1px solid black;
+//     //width: fit-content;
+//     margin: 5px;
+//     display: inline-grid; 
+// }
+
+// .pokecard:hover{
+//     box-shadow: 5px 5px 5px grey;
+// }
+
+
+// .pokeImage{
+//     width: 100%;
+//     height: auto;
+// }
+
+// .name{
+//     text-align: center;
+// }
+
+// .idClass {
+//     text-align: end;
+// }
+
+.card{
+    margin:10px;
+    border-width: 2px;
+
+    
+}
+
+.card:hover{
+    box-shadow: 5px 5px 5px grey;
+}

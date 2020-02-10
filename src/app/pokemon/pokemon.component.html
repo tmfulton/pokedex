@@ -1,0 +1,12 @@
+<h1 class="text-center">Tim's Pokedex</h1>  
+<div class="container-fluid">
+    <div class="row">
+        <div *ngFor="let poke of pokeList" class="card" routerLink="/pokemon/{{poke.id}}">
+            <div class="card-body">
+                <h1 class="lead text-center">{{poke.name}}</h1>
+                <img [src]="getPicture(poke.id)"/>
+                <div class="text-right">#{{poke.id}}</div>
+            </div>
+        </div>
+    </div>  
+</div>
