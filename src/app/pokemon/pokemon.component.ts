@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Pokemon} from '../pokemon';
-import * as jsonPokemonList from '../../assets/Pokemon.json';
+import { PokedexService } from '../service/pokedex.service';
 
 @Component({
   selector: 'app-pokemon',
@@ -9,17 +8,16 @@ import * as jsonPokemonList from '../../assets/Pokemon.json';
 })
 export class PokemonComponent implements OnInit {
 
-  pokeList: Pokemon[] = (jsonPokemonList as any).default;
 
-
-
-  constructor() { }
+  constructor(public pokedex:PokedexService) { }
 
   getPicture(id: number){
-    let pictureID : string = id.toString() + '.png';
-    return '../../assets/images/' + pictureID;
+    return this.pokedex.getPicture(id);
   }
 
+  getCaught(id: number){
+    return this.pokedex.getPokemon(id).caught??false;
+  }
 
   ngOnInit() {
 
